@@ -90,16 +90,3 @@ function onListening() {
 }
 
 
-var pool = require("./connection");
-process.once('SIGTERM', end);
-process.once('SIGINT', end);
-function end() {
-  server.close(function (err) {
-    if (err) throw err;
-    console.log('Server endded!'); 
-    pool.end(function (err) {
-      if (err) throw err; 
-      process.exit();
-    });
-  });
-}
