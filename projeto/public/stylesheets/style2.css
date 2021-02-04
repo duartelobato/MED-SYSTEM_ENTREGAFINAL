@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; 
+    text-align: center;
+    background-color: var(--main-bg-color);
+          }
+
+#medlogopng{padding:20px;width:100px; height:100px;}
+
+section{flex-grow: 1;}
+

@@ -1,0 +1,422 @@
+<html>
+
+
+
+<head>
+  <title>MED-SYSTEM</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+  <link rel="stylesheet" href="/stylesheets/alas.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/javascripts/alas.js"></script>
+  <script src="/javascripts/goback.js"></script>
+  <script src="/javascripts/collapsible.js"></script>
+  
+  
+ 
+ 
+</head>
+
+
+
+<body id="body">
+<header>
+    <img src="\images\medlogo.png" alt="MEDLOGO" id="medlogopng">
+  <section>
+    <h1><b>Alas & Camas</b></h1>
+  </section>
+  <button id="goback" onclick="goBack()"><img src="\images\goback.png" alt="GOBACK" id="gobackpng"></button>
+</header >
+
+
+  
+<div class="grid-container">
+  <div class= "container" id="div1" style="text-align:center">
+    <button class="collapsible" onclick=collapse(this)>ALA I - Neurologia</button>
+    <div class="content">
+      <span id="1" class="dot" onclick=getPopup(this)></span>
+      <div class="hover_bkgr_fricc" style="display:none">
+        <span class="helper"></span>
+        <div>
+          <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+          <h1 id="name1"></h1>
+          <p>Id da Cama: <span id="cama1"></span></p>
+          <p>Id do Paciente: <span id="pacient1"></span></p>
+          <p>Idade: <span id="age1"></span></p>
+          <p>Altura: <span id="height1"></span></p>
+          <p>Peso: <span id="weight1"></span></p>
+          <p>Doença: <span id="disease1"></span></p>
+          <p>Data de Internamento: <span id="date1"></span></p>
+          <p>Estado: <span id="state1"></span></p>
+ 
+        </div>
+      </div>
+      <span id="2" class="dot" onclick=getPopup(this)></span>
+      <div class="hover_bkgr_fricc" style="display:none">
+        <span class="helper"></span>
+        <div>
+          <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+          <h1 id="name2"></h1>
+          <p>Id da Cama: <span id="cama2"></span></p>
+          <p>Id do Paciente: <span id="pacient2"></span></p>
+          <p>Idade: <span id="age2"></span></p>
+          <p>Altura: <span id="height2"></span></p>
+          <p>Peso: <span id="weight2"></span></p>
+          <p>Doença: <span id="disease2"></span></p>
+          <p>Data de Internamento: <span id="date2"></span></p>
+          <p>Estado: <span id="state2"></span></p>
+ 
+        </div>
+      </div>
+      <span id="3" class="dot" onclick=getPopup(this)></span>
+      <div class="hover_bkgr_fricc" style="display:none">
+        <span class="helper"></span>
+        <div>
+          <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+          <h1 id="name3"></h1>
+          <p>Id da Cama: <span id="cama3"></span></p>
+          <p>Id do Paciente: <span id="pacient3"></span></p>
+          <p>Idade: <span id="age3"></span></p>
+          <p>Altura: <span id="height3"></span></p>
+          <p>Peso: <span id="weight3"></span></p>
+          <p>Doença: <span id="disease3"></span></p>
+          <p>Data de Internamento: <span id="date3"></span></p>
+          <p>Estado: <span id="state3"></span></p>
+ 
+        </div>
+      </div>     
+      <span id="4" class="dot" onclick=getPopup(this)></span>
+      <div class="hover_bkgr_fricc" style="display:none">
+        <span class="helper"></span>
+        <div>
+          <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+          <h1 id="name4"></h1>
+          <p>Id da Cama: <span id="cama4"></span></p>
+          <p>Id do Paciente: <span id="pacient4"></span></p>
+          <p>Idade: <span id="age4"></span></p>
+          <p>Altura: <span id="height4"></span></p>
+          <p>Peso: <span id="weight4"></span></p>
+          <p>Doença: <span id="disease4"></span></p>
+          <p>Data de Internamento: <span id="date4"></span></p>
+          <p>Estado: <span id="state4"></span></p>
+ 
+        </div>
+      </div>
+      <span id="5" class="dot" onclick=getPopup(this)></span>
+      <div class="hover_bkgr_fricc" style="display:none">
+        <span class="helper"></span>
+        <div>
+          <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+          <h1 id="name5"></h1>
+          <p>Id da Cama: <span id="cama5"></span></p>
+          <p>Id do Paciente: <span id="pacient5"></span></p>
+          <p>Idade: <span id="age5"></span></p>
+          <p>Altura: <span id="height5"></span></p>
+          <p>Peso: <span id="weight5"></span></p>
+          <p>Doença: <span id="disease5"></span></p>
+          <p>Data de Internamento: <span id="date5"></span></p>
+          <p>Estado: <span id="state5"></span></p>
+ 
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class= "container" id="div2" style="text-align:center">
+    <button class="collapsible" onclick="collapse(this)">ALA II - COVID</button>
+    <div class="content"> 
+        <span id="6" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name6"></h1>
+            <p>Id da Cama: <span id="cama6"></span></p>
+            <p>Id do Paciente: <span id="pacient6"></span></p>
+            <p>Idade: <span id="age6"></span></p>
+            <p>Altura: <span id="height6"></span></p>
+            <p>Peso: <span id="weight6"></span></p>
+            <p>Doença: <span id="disease6"></span></p>
+            <p>Data de Internamento: <span id="date6"></span></p>
+            <p>Estado: <span id="state6"></span></p>
+   
+          </div>
+        </div>
+        <span id="7" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name7"></h1>
+            
+            <p>Id da Cama: <span id="cama7"></span></p>
+            <p>Id do Paciente: <span id="pacient7"></span></p>
+            <p>Idade: <span id="age7"></span></p>
+            <p>Altura: <span id="height7"></span></p>
+            <p>Peso: <span id="weight7"></span></p>
+            <p>Doença: <span id="disease7"></span></p>
+            <p>Data de Internamento: <span id="date7"></span></p>
+            <p>Estado: <span id="state7"></span></p>
+   
+          </div>
+        </div>
+        <span id="8" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name"></h1>
+            
+            <p>Id da Cama: <span id="cama8"></span></p>
+            <p>Id do Paciente: <span id="pacient8"></span></p>
+            <p>Idade: <span id="age8"></span></p>
+            <p>Altura: <span id="height8"></span></p>
+            <p>Peso: <span id="weight8"></span></p>
+            <p>Doença: <span id="disease8"></span></p>
+            <p>Data de Internamento: <span id="date8"></span></p>
+            <p>Estado: <span id="state8"></span></p>
+   
+          </div>
+        </div>
+        <span id="9" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name9"></h1>
+            
+            <p>Id da Cama: <span id="cama9"></span></p>
+            <p>Id do Paciente: <span id="pacient9"></span></p>
+            <p>Idade: <span id="age9"></span></p>
+            <p>Altura: <span id="height9"></span></p>
+            <p>Peso: <span id="weight9"></span></p>
+            <p>Doença: <span id="disease9"></span></p>
+            <p>Data de Internamento: <span id="date9"></span></p>
+            <p>Estado: <span id="state9"></span></p>
+   
+          </div>
+        </div>
+        <span id="10" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name10"></h1>
+            
+            <p>Id da Cama: <span id="cama10"></span></p>
+            <p>Id do Paciente: <span id="pacient10"></span></p>
+            <p>Idade: <span id="age10"></span></p>
+            <p>Altura: <span id="height10"></span></p>
+            <p>Peso: <span id="weight10"></span></p>
+            <p>Doença: <span id="disease10"></span></p>
+            <p>Data de Internamento: <span id="date10"></span></p>
+            <p>Estado: <span id="state10"></span></p>
+   
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class= "container" id="div3" style="text-align:center">
+    <button class="collapsible" onclick=collapse(this)>ALA III - Urologia</button>
+      <div class="content"> 
+        <span id="11" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name11"></h1>
+            
+            <p>Id da Cama: <span id="cama11"></span></p>
+            <p>Id do Paciente: <span id="pacient11"></span></p>
+            <p>Idade: <span id="age11"></span></p>
+            <p>Altura: <span id="height11"></span></p>
+            <p>Peso: <span id="weight11"></span></p>
+            <p>Doença: <span id="disease11"></span></p>
+            <p>Data de Internamento: <span id="date11"></span></p>
+            <p>Estado: <span id="state11"></span></p>
+   
+          </div>
+        </div>
+        <span id="12" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name12"></h1>
+            
+            <p>Id da Cama: <span id="cama12"></span></p>
+            <p>Id do Paciente: <span id="pacient12"></span></p>
+            <p>Idade: <span id="age12"></span></p>
+            <p>Altura: <span id="height12"></span></p>
+            <p>Peso: <span id="weight12"></span></p>
+            <p>Doença: <span id="disease12"></span></p>
+            <p>Data de Internamento: <span id="date12"></span></p>
+            <p>Estado: <span id="state12"></span></p>
+          </div>
+        </div>
+        <span id="13" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name13"></h1>
+            
+            <p>Id da Cama: <span id="cama13"></span></p>
+            <p>Id do Paciente: <span id="pacient13"></span></p>
+            <p>Idade: <span id="age13"></span></p>
+            <p>Altura: <span id="height13"></span></p>
+            <p>Peso: <span id="weight13"></span></p>
+            <p>Doença: <span id="disease13"></span></p>
+            <p>Data de Internamento: <span id="date13"></span></p>
+            <p>Estado: <span id="state13"></span></p>
+   
+          </div>
+        </div>
+        <span id="14" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name14"></h1>
+            
+            <p>Id da Cama: <span id="cama14"></span></p>
+            <p>Id do Paciente: <span id="pacient14"></span></p>
+            <p>Idade: <span id="age14"></span></p>
+            <p>Altura: <span id="height14"></span></p>
+            <p>Peso: <span id="weight14"></span></p>
+            <p>Doença: <span id="disease14"></span></p>
+            <p>Data de Internamento: <span id="date14"></span></p>
+            <p>Estado: <span id="state14"></span></p>
+   
+          </div>
+        </div>
+        <span id="15" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name15"></h1>
+            
+            <p>Id da Cama: <span id="cama15"></span></p>
+            <p>Id do Paciente: <span id="pacient15"></span></p>
+            <p>Idade: <span id="age15"></span></p>
+            <p>Altura: <span id="height15"></span></p>
+            <p>Peso: <span id="weight15"></span></p>
+            <p>Doença: <span id="disease15"></span></p>
+            <p>Data de Internamento: <span id="date15"></span></p>
+            <p>Estado: <span id="state15"></span></p>
+   
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class= "container" id="div4" style="text-align:center">
+    <button class="collapsible" onclick=collapse(this)>ALA IV - Dermatologia</button>
+      <div class="content">
+        <span id="16" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name16"></h1>
+            
+            <p>Id da Cama: <span id="cama16"></span></p>
+            <p>Id do Paciente: <span id="pacient16"></span></p>
+            <p>Idade: <span id="age16"></span></p>
+            <p>Altura: <span id="height16"></span></p>
+            <p>Peso: <span id="weight16"></span></p>
+            <p>Doença: <span id="disease16"></span></p>
+            <p>Data de Internamento: <span id="date16"></span></p>
+            <p>Estado: <span id="state16"></span></p>
+   
+          </div>
+        </div>
+        <span id="17" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name17"></h1>
+            
+            <p>Id da Cama: <span id="cama17"></span></p>
+            <p>Id do Paciente: <span id="pacient17"></span></p>
+            <p>Idade: <span id="age17"></span></p>
+            <p>Altura: <span id="height17"></span></p>
+            <p>Peso: <span id="weight17"></span></p>
+            <p>Doença: <span id="disease17"></span></p>
+            <p>Data de Internamento: <span id="date17"></span></p>
+            <p>Estado: <span id="state17"></span></p>
+   
+          </div>
+        </div>
+        <span id="18" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name18"></h1>
+            
+            <p>Id da Cama: <span id="cama18"></span></p>
+            <p>Id do Paciente: <span id="pacient18"></span></p>
+            <p>Idade: <span id="age18"></span></p>
+            <p>Altura: <span id="height18"></span></p>
+            <p>Peso: <span id="weight18"></span></p>
+            <p>Doença: <span id="disease18"></span></p>
+            <p>Data de Internamento: <span id="date18"></span></p>
+            <p>Estado: <span id="state18"></span></p>
+   
+          </div>
+        </div>
+        <span id="19" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name19"></h1>
+            
+            <p>Id da Cama: <span id="cama19"></span></p>
+            <p>Id do Paciente: <span id="pacient19"></span></p>
+            <p>Idade: <span id="age19"></span></p>
+            <p>Altura: <span id="height19"></span></p>
+            <p>Peso: <span id="weight19"></span></p>
+            <p>Doença: <span id="disease19"></span></p>
+            <p>Data de Internamento: <span id="date19"></span></p>
+            <p>Estado: <span id="state19"></span></p>
+   
+          </div>
+        </div>
+        <span id="20" class="dot" onclick=getPopup(this)></span>
+        <div class="hover_bkgr_fricc" style="display:none">
+          <span class="helper"></span>
+          <div>
+            <div onclick=closePopup(this) class="popupCloseButton">&times;</div>
+            <h1 id="name20"></h1>
+            
+            <p>Id da Cama: <span id="cama20"></span></p>
+            <p>Id do Paciente: <span id="pacient20"></span></p>
+            <p>Idade: <span id="age20"></span></p>
+            <p>Altura: <span id="height20"></span></p>
+            <p>Peso: <span id="weight20"></span></p>
+            <p>Doença: <span id="disease20"></span></p>
+            <p>Data de Internamento: <span id="date20"></span></p>
+            <p>Estado: <span id="state20"></span></p>
+   
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+ 
+ 

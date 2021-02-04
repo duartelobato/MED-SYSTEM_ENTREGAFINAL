@@ -1,0 +1,85 @@
+body {
+    font-family: "Lato", sans-serif;
+    display: inline;
+    
+  }
+
+.tablink {
+  background-color: rgb(31, 76, 97);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: rgb(31, 76, 97);
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display:none;
+  padding: 5%;
+  text-align: center;  
+  background-image: linear-gradient(rgb(0, 23, 87), rgba(255, 255, 255, 0));
+
+}
+
+#Paciente {background-color:--main-bg-color;}
+#Cama {background-color:--main-bg-color;}
+#Gestao {background-color:--main-bg-color;}
+
+/*tabela*/
+
+#tableGestao {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tableGestao td, #table th {
+  border: 1px solid rgb(158, 153, 153);
+  padding: 8px;
+}
+
+#tableGestao tr{background-color: #f2f2f2;}
+
+#tableGestao tr:hover {background-color: #ddd;}
+
+#tableGestao th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #017c85;
+  color: white;
+}
+
+
+
+#tableCama {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tableCama td, #table th {
+  border: 1px solid rgb(158, 153, 153);
+  padding: 8px;
+}
+
+#tableCama tr{background-color: #f2f2f2;}
+
+#tableCama tr:hover {background-color: #ddd;}
+
+#tableCama th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #017c85;
+  color: white;
+}

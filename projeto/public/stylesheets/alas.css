@@ -1,0 +1,111 @@
+.dot {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    padding: 2%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(134, 134, 134);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #div1 {
+    grid-area: d1;
+    margin:10%;
+    width: 199%;
+  }
+  
+  #div2 {
+    grid-area: d2;
+    margin:10%;
+    width: 199%;
+  }     
+
+  #div3 {
+    grid-area: d3;
+    margin:10%;
+    width: 199%;
+  }
+
+  #div4 {
+    grid-area: d4;
+    margin:10%;
+    width: 199%;
+  }
+
+
+  .grid-container{
+  display: grid;
+  grid-template-areas: 'd1 d1 d2 d2' 'd3 d3 d4 d4';
+  grid-gap: 1% 52%;
+
+}
+
+
+button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+
+/*popup css*/
+
+
+/* Popup box BEGIN */
+
+
+.hover_bkgr_fricc{
+  display: none;
+  cursor:pointer;
+  height:100%;
+  position:fixed;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+  margin-right: -58%;
+}
+.hover_bkgr_fricc > div {
+  background-color: #fff;
+  display: inline-block;
+  height: auto;
+  max-width: 551px;
+  min-height: 100px;
+  vertical-align: middle;
+  width: 20%;
+  position: relative;
+  border-radius: 8px;
+  padding: 15px 5%;
+}
+.popupCloseButton {
+  background-color: #fff;
+  border: 3px solid rgb(189, 8, 8);
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.popupCloseButton:hover {
+  background-color: #ccc;
+}
+
+
