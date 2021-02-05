@@ -31,7 +31,7 @@ app.use('/api/estados', estadoRouter);
 
 module.exports = app;
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 app.listen(PORT, function() {
     console.log('Server listening on ' + PORT);
