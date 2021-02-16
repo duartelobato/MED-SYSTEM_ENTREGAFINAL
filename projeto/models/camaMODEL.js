@@ -1,10 +1,10 @@
 var pool = require("../connection");
 module.exports.getAllCamas = async function() {
     try {
-    const sql = 'SELECT * FROM cama WHERE cama_pac_id = 0';
+    const sql = 'SELECT cama_id, ala_descricao FROM cama c INNER JOIN ala a ON c.cama_ala_id = a.ala_id WHERE c.cama_pac_id = 0';
     const camas = await pool.query(sql);
     console.log(sql);
-    return camas;
+    return {status:200, data:camas};;
     } catch (err) {
     console.log(err);
     return err;

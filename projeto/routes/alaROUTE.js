@@ -3,8 +3,13 @@ var alaROUTE = express.Router();
 var mAla = require('../models/alaMODEL');
 
 alaROUTE.get('/', async function(req,res,next) {
- let alas = await mAla.getAllAlas();
- res.send(alas);
-});
+    let estados = await mAla.getAllEstados();
+    res.send(estados);
+    });
 
+alaROUTE.get('/ocupadas', async function(req,res,next) {
+    let ocupadas = await mAla.getAllOcupadas();
+    res.send(ocupadas);
+   });
+   
 module.exports = alaROUTE;

@@ -3,9 +3,14 @@ var camaROUTE = express.Router();
 var mCama = require('../models/camaMODEL');
 
 camaROUTE.get('/', async function(req,res,next) {
- let camas = await mCama.getAllCamas();
- res.send(camas);
-});
+    let camas = await mCama.getAllCamas();
+    res.send(camas);
+    });
+
+camaROUTE.put('/', async function(req,res,next) {
+    let msg = await mCama.insertCama(req.body);
+    res.send(msg);
+    });
 
 camaROUTE.get('/rows', async function(req,res,next) {
     let rows = await mCama.getAllRows();
@@ -15,11 +20,6 @@ camaROUTE.get('/rows', async function(req,res,next) {
 camaROUTE.get('/ind', async function(req,res,next) {
     let ind = await mCama.getIndicador();
     res.send(ind);
-   });
-
-camaROUTE.put('/', async function(req,res,next) {
-    let msg = await mCama.insertCama(req.body);
-    res.send(msg);
    });
 
 camaROUTE.put('/:cama_id', async function(req,res,next) {

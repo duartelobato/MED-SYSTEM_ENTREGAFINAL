@@ -7,7 +7,7 @@ var logger = require('morgan');
 var pacienteRouter = require('./routes/pacienteROUTE')
 var alaRouter = require('./routes/alaROUTE')
 var camaRouter = require('./routes/camaROUTE')
-var estadoRouter = require('./routes/estadoROUTE');
+
 
 
 
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/pacientes', pacienteRouter);
 app.use('/api/alas', alaRouter);
 app.use('/api/camas', camaRouter);
-app.use('/api/estados', estadoRouter);
+
 
 
 

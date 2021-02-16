@@ -36,7 +36,7 @@ async function loadAtrib(){
       let html="";
       for(let bed of camas)
           html += "<option value="+bed.cama_id+">"+
-                   bed.cama_id+"</option>";
+                   bed.cama_id+" - "+bed.ala_descricao+"</option>";
       bedElem.innerHTML = html;
   } catch (err) {
       // Error handling
@@ -163,7 +163,7 @@ function generateTable(table, data) {
         var cellInstruction = row.insertCell(2);
         cell1.innerHTML = data[i].cama_id;
         cell2.innerHTML = data[i].pac_nome;
-        cellInstruction.innerHTML = '<button class="Remover" type="button" onClick="removePacient(this)">';
+        cellInstruction.innerHTML = '<button class="Remover" type="button" onClick="removePacient(this)">Remover</button>';
     } 
 }
   
@@ -188,6 +188,7 @@ async function removePacient(button) {
             contentType: "application/json",
             dataType:"json"
         });
+        console.log(result.data[0].pac_id);
         
         document.getElementById("tableGestao").deleteRow(row.rowIndex);
      
@@ -213,7 +214,10 @@ function generateTableCama(table, data) {
         nome.innerHTML = data[i].pac_nome;
         idade.innerHTML = data[i].pac_idade;
         estado.innerHTML = data[i].pac_estado;
-        entrada.innerHTML = data[i].pac_entrada;
+        var mydate = new Date(data[i].pac_entrada);
+        var month = parseInt(mydate.getMonth())+1;
+        var str = mydate.getDate()+"-"+month+"-"+mydate.getFullYear();
+        entrada.innerHTML = str;
     } 
 }
 

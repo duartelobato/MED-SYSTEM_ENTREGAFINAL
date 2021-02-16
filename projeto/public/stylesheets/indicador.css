@@ -1,4 +1,22 @@
 h2{
-    background-color: rgba(240, 248, 255, 0.726);
-    width: 70%;
+    color:#00B7FF;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.829);
+    width: 80%;
+    font-size:x-large;
+}
+
+h3{
+    background-color: rgba(240, 248, 255, 0.829);
+    width: 80%;
+    font-size:large;
+}
+
+main{
+    margin-left: 10%;}
+
+#chartContainer{
+    padding: 5%;
+    margin-top: auto;
+   
 }

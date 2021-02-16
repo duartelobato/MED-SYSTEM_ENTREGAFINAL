@@ -4,7 +4,7 @@ window.onload = async function(){
    
     try {
         let estados = await $.ajax({
-            url: "http://localhost:3001/api/estados",
+            url: "http://localhost:3001/api/alas",
             method: "get",
             dataType: "json"
         });
@@ -39,14 +39,6 @@ window.onload = async function(){
         console.log(err);
         
     }
-
-
-
-    
-    
-
-
-
        
 }
 
@@ -73,8 +65,7 @@ function getPopup(element){
 
 function closePopup(element){
     
-    while(element.className!="hover_bkgr_fricc"){
-        console.log(element);    
+    while(element.className!="hover_bkgr_fricc"){   
         element = element.parentElement;
          
     }
@@ -99,7 +90,10 @@ async function getFicha(cama_id) {
         document.getElementById("height"+cama_id).innerHTML = ficha.data[0].pac_altura;
         document.getElementById("weight"+cama_id).innerHTML = ficha.data[0].pac_peso;
         document.getElementById("disease"+cama_id).innerHTML = ficha.data[0].pac_doenca;
-        document.getElementById("date"+cama_id).innerHTML = ficha.data[0].pac_entrada;
+        var mydate = new Date(ficha.data[0].pac_entrada);
+        var month = parseInt(mydate.getMonth())+1;
+        var str = mydate.getDate()+"-"+month+"-"+mydate.getFullYear();
+        document.getElementById("date"+cama_id).innerHTML = str;
         document.getElementById("state"+cama_id).innerHTML = ficha.data[0].pac_estado;
     }
     catch(err) {
